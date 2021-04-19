@@ -1,15 +1,17 @@
 import './Products.css'
 import Product from './Product'
 
-function Products(){
-    return(<section class="products">
-        <Product/> 
-        <Product/>
-        <Product/>
-        <Product/>
-        <Product/>
-        <Product/>   
+function Products({products}){
+    
+    return(<section className="products">
+    {products.map((product)=>(
+        <Product key= {product.id} product={product}  />
+    )
+    
+    )}
+          
     </section>
+
 
     );
 }

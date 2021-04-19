@@ -1,17 +1,17 @@
 import './Product.css'
 
-function Product(){
+function Product({product}){
     return ( 
       
-      <div class="product-card">
-        <div class="product-image">
+      <div className="product-card">
+        <div className="product-image">
           <img
-            src="https://cdn.shopify.com/s/files/1/0938/8938/products/10231100205_1_1315x1800_300_CMYK_1024x1024.jpeg?v=1445623369"
+            src={product.image} title={product.description} alt={product.title} 
           />
         </div>
-        <div class="product-info">
-          <h5>Winter Jacket</h5>
-          <h6>$99.99</h6>
+        <div className="product-info">
+          <h5>{product.title}</h5>
+          <h6>${product.price}</h6>
         </div>
       </div>
 
