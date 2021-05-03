@@ -25,7 +25,7 @@
     text-transform: uppercase;
   }.product-filter {
     display: flex;
-    padding: 30px 0;
+    text-align: center;
   }
   
   .sort {
