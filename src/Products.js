@@ -1,21 +1,29 @@
 import './Products.css'
 import Product from './Product'
+import Cart from './Cart';
 
-function Products({products}){
+function Products({ products }) {
+
+    return (
     
-    return(<section className="products">
-    {products.map(({id, title, price, description, image })=>(
-        <Product 
-        key= {id} 
-        title={title} 
-        price={price}
-        description={description}
-        image={image}
-         />
-    )
-    
-    )}
-          
+
+     <section className="products">
+        
+
+
+        {products.map(({ id, title, price, description, image }) => (
+            <Product
+                key={id}
+                id={id}
+                title={title}
+                price={price}
+                description={description}
+                image={image}
+            />
+        )
+
+        )}
+
     </section>
 
 
