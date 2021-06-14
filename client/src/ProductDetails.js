@@ -35,19 +35,6 @@ function ProductDetails() {
         <h3>Description: {product.description}$</h3>
       </div>
     </div>
-    /*<div>
-      product id:{id}
-      <br />
-      title: {product.title}
-      <br />
-      price: {product.price}$
-      <br />
-      category: {product.category}
-      <br />
-      image: {product.image}
-      <br />
-      description: {product.description}
-    </div>*/
   );
 }
 export default ProductDetails;

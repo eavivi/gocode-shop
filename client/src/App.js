@@ -12,7 +12,7 @@ function App() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
+    fetch("/api/products")
       .then((Response) => Response.json())
       .then((data) => setProducts(data));
   }, []);
@@ -36,6 +36,18 @@ function App() {
 
   function addToCart(id) {
     const productToAdding = products.find((p) => p.id === id);
+    /*setCart(
+      cart.map((product) => {
+        if (product.id === id) {
+          return {
+            ...product,
+            amount: product.amount + 1,
+          };
+        } else {
+          return productToAdding;
+        }
+      })
+    );*/
 
     setCart([...cart, productToAdding]);
     setNumItems(cart.length + 1);
@@ -45,7 +57,7 @@ function App() {
   return (
     <ProductContext.Provider value={{ addToCart, numItems, totalPrice, cart }}>
       <nav>
-        <Link to="/">Home</Link>
+        <Link to="/">Home Page</Link>
       </nav>
       <Switch>
         <Route path="/Products/:id">
