@@ -9,8 +9,8 @@ function Cart() {
   const cartItem = (
     <ol className="cart-items">
       {cart.map((item) => (
-        <li>
-          <img src={item.image} />
+        <li key={item.title}>
+          <img src={item.image} alt={item.title} />
           <br />
           <span className="product-features">title:</span>
           {item.title} <br />
@@ -23,7 +23,6 @@ function Cart() {
 
   return (
     <div className="cart">
-      {" "}
       <button className="button--alt">x</button>
       <span className="myorder">
         <br />

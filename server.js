@@ -4,6 +4,7 @@ const app = express();
 app.use(express.json());
 const mongoose = require("mongoose");
 require("dotenv").config();
+
 app.use(express.static("client/build"));
 
 const ProductSchema = mongoose.Schema({

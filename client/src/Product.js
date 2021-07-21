@@ -12,7 +12,7 @@ function Product({ title, price, description, image, id }) {
       </div>
       <div className="product-info">
         <h5>
-          <Link to={`Products/${id}`}>{title}</Link>
+          <Link to={`/${id}`}>{title}</Link>
         </h5>
         <h6>${price}</h6>
         <button onClick={() => addToCart(id)}> + Add to cart + </button>

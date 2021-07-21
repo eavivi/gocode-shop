@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./Header";
 import Products from "./Products";
 import Cart from "./Cart";
+
 import ProductContext from "./ProductContext";
 import { Slider } from "@material-ui/core";
 import { Link, Route, Switch } from "react-router-dom";
@@ -35,7 +36,7 @@ function App() {
   const [totalPrice, setTotalPrice] = useState(0);
 
   function addToCart(id) {
-    const productToAdding = products.find((p) => p.id === id);
+    const productToAdding = products.find((p) => p._id === id);
     /*setCart(
       cart.map((product) => {
         if (product.id === id) {
@@ -60,7 +61,7 @@ function App() {
         <Link to="/">Home Page</Link>
       </nav>
       <Switch>
-        <Route path="/Products/:id">
+        <Route path="/:id">
           <ProductDetails />
         </Route>
         <Route path="/">

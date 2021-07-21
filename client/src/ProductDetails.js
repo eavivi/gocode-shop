@@ -8,7 +8,7 @@ function ProductDetails() {
   const [product, setProduct] = useState([]);
 
   useEffect(() => {
-    fetch(`https://fakestoreapi.com/products/${id}`)
+    fetch(`/api/products/${id}`)
       .then((Response) => Response.json())
       .then((data) => setProduct(data));
   }, []);
@@ -22,7 +22,7 @@ function ProductDetails() {
         />
       </div>
       <h1>
-        product id: {product.id}. <br />
+        product id: {product._id} <br />
         <br />
       </h1>
       <h5>Title: {product.title}</h5>
